@@ -153,3 +153,8 @@ addxwnmr2pipe: $(OBJECTS_C) $(OBJECTS_DBP)
 defl2pipe: $(OBJECTS_C) $(OBJECTS_DFL)
 	$(CC) $@.c $^ -o $@ \
 	$(CFLAGS) $(MFLAGS)
+
+BIN = ./bin/
+install:
+	mkdir -p $(BIN)
+	cp $(TARGETS) $(BIN) 
